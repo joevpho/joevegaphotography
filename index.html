@@ -1,0 +1,128 @@
+---
+layout: page
+title: Airspace
+permalink: /
+---
+
+<!-- Slider Start -->
+<section id="slider" class="full-slider">
+  <div class="fake-container">
+    <div class="row">
+      <div class="cycle-slideshow home-gallery" 
+        data-cycle-fx=scrollHorz
+        data-cycle-timeout=5000
+        >
+        
+        <!-- prev/next links -->
+        <div class="cycle-prev"></div>
+        <div class="cycle-next"></div>
+        <!-- empty element for overlay -->
+        <!-- <div class="cycle-overlay"></div> -->
+    
+        <img src="{{ site.baseurl }}/img/index-slider/amber-boudoir-couch-01.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/Athena-Corset-01.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/Attica-Blacklingerie-04-2.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/attica-christmas-candy-08.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/ava-boudoir-room-01.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/boudoir-room-01.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/daniele-redrose-02-bw.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/Hawk-Boudoir-10.jpg">
+        <img src="{{ site.baseurl }}/img/index-slider/JeansNRedTop-04.jpg">
+      </div>
+      <!-- <div class="col-md-10 col-md-offset-2">
+        <div class="block">
+          <h1 class="animated fadeInUp">A DIGITAL MARKETING &#38; <br> DESIGN AGENCY</h1>
+          <p class="animated fadeInUp">We love the Web and the work we do. We work closely with our clients to deliver the best possible solutions for their needs</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-sm-12">
+          <div class="block">
+            <div class="section-title">
+              <h2>Boudoir Photographer</h2>
+              <p> Stan and Jane are Wedding and Portrait Photographers located in North East England. They primarily photograph weddings in Co. Durham, North Yorkshire, Newcastle and Northumberland, but love to also venture further a field in the United Kingdom and beyond. Their work is regularly featured in Bridal Magazines and Wedding Blogs.
+                  
+                  They have a spacious Portrait Studio based in Darlington, Co. Durham and are happy to offer both Studio Portrait Shoots or Location Photography Shoots in some of the stunning countryside and coastal locations in the North East area.
+              </p>
+            </div>
+          </div>
+        </div><!-- .col-md-7 close -->
+        <div class="col-md-5 col-sm-12">
+          <div class="block">
+            <img src="img/wrapper-img.png" alt="Img">
+          </div>
+        </div><!-- .col-md-5 close -->
+      </div>
+    </div>
+  </section>
+  
+  <section id="feature">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-6">
+        <h2>Tell your stories through Photographs</h2>
+        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <a href="#" class="btn btn-view-works">View Works</a>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+<!-- Content Start -->
+<section id="testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="section-title text-center">
+          <h2>Testimonials and Facts</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          {% if site.data.funfacts.size > 0 %}
+          <div class="block">
+            {% for ff in site.data.funfacts %}
+            <ul class="counter-box clearfix">
+              <li>
+                <div class="block">
+                  <i class="{{ ff.icon }}"></i>
+                  <h4 class="counter">{{ ff.counter }}</h4>
+                  <span>{{ ff.text }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-md-6">
+          {% if site.data.testimonials.size > 0 %}
+          <div class="testimonial-carousel">
+            <div id="testimonial-slider" class="owl-carousel">
+              {% for tm in site.data.testimonials %}
+              <div>
+                  <img src="img/cotation.png" alt="IMG">
+                  <p>{{ tm.testimonial }}</p>
+                  <div class="user">
+                    <img src="{{ tm.image }}" alt="Pepole">
+                    <p><span>{{ tm.name }}</span> {{ tm.title }}</p>
+                  </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>

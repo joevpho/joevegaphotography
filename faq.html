@@ -1,0 +1,27 @@
+---
+layout: page
+title: FAQ
+permalink: /faq/
+---
+<!-- Slider Start -->
+<section id="global-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>FAQ</h1>
+          <p>Don't see your question here? Contact me ;)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% for post in site.data.faq %}
+<div class="post-area">
+  <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
+  <!-- <p class="post-date">{{ post.content }}</p> -->
+  <p>
+    {{ post.content | strip_html | truncatewords: 50 }}
+  </p>
+</div>
+{% endfor %}
